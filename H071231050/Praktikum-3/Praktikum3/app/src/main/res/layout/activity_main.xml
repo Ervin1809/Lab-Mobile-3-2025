@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="14dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/heart"
+            android:layout_marginEnd="22dp"
+            />
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/messenger"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:src="@drawable/home"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:src="@drawable/search"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/btnUpload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/add"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/clapper"
+            android:layout_weight="1"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnKeProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ervin"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+<!--    <ScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/instagram"-->
+<!--        android:layout_above="@+id/buttonPanel"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:scrollbars="vertical"-->
+<!--        >-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/instagram"
+            android:layout_above="@+id/buttonPanel">
+            <LinearLayout
+                android:id="@+id/storyIg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ervin"
+                    android:layout_weight="1"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/nanci"
+                    android:layout_weight="1"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/fara"
+                    android:layout_weight="1"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/caca"
+                    android:layout_weight="1"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/caca"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_postingan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/postingan_layout"
+                android:layout_below="@+id/storyIg"/>
+        </LinearLayout>
+<!--    </ScrollView>-->
+
+
+
+
+
+</RelativeLayout>
