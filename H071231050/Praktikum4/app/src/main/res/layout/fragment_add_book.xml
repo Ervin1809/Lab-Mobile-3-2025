@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Fragment.AddBookFragment">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Book"
+            android:textColor="@color/dark_text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Main Content Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="-16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Book Cover Section -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/coverImageCard"
+                    android:layout_width="160dp"
+                    android:layout_height="220dp"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgBookCover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#2A2A2A"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#66000000" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Form Fields Section -->
+                <!-- Title Field -->
+                <TextView
+                    android:id="@+id/labelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/coverImageCard"
+                    android:layout_marginTop="24dp"
+                    android:text="Book Title"
+                    android:textColor="@color/dark_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/titleInputCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelTitle"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#303030"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/editTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Enter book title"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:textColor="@color/dark_text"
+                        android:textColorHint="@color/medium_text"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Author Field -->
+                <TextView
+                    android:id="@+id/labelAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleInputCard"
+                    android:layout_marginTop="16dp"
+                    android:text="Author"
+                    android:textColor="@color/dark_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/authorInputCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelAuthor"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#303030"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/editAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Enter author name"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:textColor="@color/dark_text"
+                        android:textColorHint="@color/medium_text"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Publication Year Field -->
+                <TextView
+                    android:id="@+id/labelYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/authorInputCard"
+                    android:layout_marginTop="16dp"
+                    android:text="Publication Year"
+                    android:textColor="@color/dark_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/yearInputCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelYear"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#303030"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/editYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Enter publication year"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="16dp"
+                        android:textColor="@color/dark_text"
+                        android:textColorHint="@color/medium_text"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Genres Section -->
+                <TextView
+                    android:id="@+id/labelGenres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/yearInputCard"
+                    android:layout_marginTop="16dp"
+                    android:text="Genres"
+                    android:textColor="@color/dark_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Elegant Checkbox Grid -->
+
+                <!-- Row 1 -->
+                <HorizontalScrollView
+                    android:id="@+id/genresGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelGenres"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:id="@+id/checkboxContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="start"/>
+                </HorizontalScrollView>
+
+
+                <!-- Blurb/Synopsis Area -->
+                <TextView
+                    android:id="@+id/labelBlurb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genresGrid"
+                    android:layout_marginTop="16dp"
+                    android:text="Synopsis"
+                    android:textColor="@color/dark_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/blurbInputCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelBlurb"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="#303030"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/editBlurb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="Enter book synopsis"
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:padding="16dp"
+                        android:textColor="@color/dark_text"
+                        android:textColorHint="@color/medium_text"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Submit Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_below="@id/blurbInputCard"
+                    android:backgroundTint="@color/accent"
+                    android:text="Add Book"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:elevation="8dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white" />
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

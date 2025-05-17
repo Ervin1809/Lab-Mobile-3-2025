@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp">
+
+    <!-- CardView digunakan sebagai container untuk checkbox -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#303030"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="8dp"
+        tools:ignore="MissingConstraints">
+
+        <!-- LinearLayout di dalam CardView untuk menampung CheckBox -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:padding="12dp">
+
+            <CheckBox
+                android:id="@+id/checkboxGenre"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:paddingStart="8dp"
+                android:text="Reincarnation"
+                android:textColor="@color/dark_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
